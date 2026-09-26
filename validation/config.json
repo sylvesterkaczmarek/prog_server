@@ -1,0 +1,36 @@
+{
+  "issue": 34,
+  "issue_url": "https://github.com/nasa/prog_server/issues/34",
+  "base": "5810353bc1dcb6144aea7531653170701995dd3c",
+  "sha": "19fb461c948db4373dd829b5ab68c07439d2aad0",
+  "branch": "fix/loading-update-response-20260926",
+  "paths": [
+    "src/prog_client/session.py",
+    "tests/client_loading.py"
+  ],
+  "title": "Accept successful loading-profile update responses",
+  "source": "src/prog_client/session.py",
+  "test": "tests/client_loading.py",
+  "suite": [
+    "-c",
+    "import runpy, prog_server\ntry:\n runpy.run_module('tests',run_name='__main__')\nfinally:\n prog_server.stop()\n"
+  ],
+  "suite_marker": "All tests succeeded",
+  "targeted": [
+    "-m",
+    "unittest",
+    "tests.client_loading",
+    "-v"
+  ],
+  "original_marker": "FAILED (errors=4)",
+  "module": "prog_client",
+  "build_args": [],
+  "installed": [
+    "-m",
+    "unittest",
+    "test_installed",
+    "-v"
+  ],
+  "installed_marker": "Ran 9 tests",
+  "summary": "17 tests across all three suites passed; 9 installed-wheel tests passed; 4 original errors reproduced."
+}

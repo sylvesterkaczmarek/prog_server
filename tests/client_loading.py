@@ -72,8 +72,8 @@ class LoadingEndpointTest(unittest.TestCase):
         self.requests = []
         self.queue = self.start_patch(patch(
             "prog_server.models.session.add_to_predict_queue"))
-        self.enterContext(patch.dict(controllers.sessions, {}, clear=True))
-        self.enterContext(patch.object(controllers, "session_count", 0))
+        self.start_patch(patch.dict(controllers.sessions, {}, clear=True))
+        self.start_patch(patch.object(controllers, "session_count", 0))
         self.start_patch(patch("requests.sessions.Session.send", self.send))
         self.client = Session("ThrownObject", host="example.invalid",
                               load_est="Const", load_est_cfg={"load": {}})

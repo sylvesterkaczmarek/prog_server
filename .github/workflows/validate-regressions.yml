@@ -12,7 +12,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python: ['3.10', '3.12', '3.13']
+        python: ['3.10', '3.11', '3.12']
     env:
       PYTHONDONTWRITEBYTECODE: '1'
       MPLBACKEND: Agg
@@ -26,7 +26,7 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           repository: sylvesterkaczmarek/prog_server
-          ref: 19fb461c948db4373dd829b5ab68c07439d2aad0
+          ref: 40d5491866b4ef9db6d921c4fc792cb839da52ee
           path: source
           fetch-depth: 0
           persist-credentials: false

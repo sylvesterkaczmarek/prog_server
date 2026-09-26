@@ -2,7 +2,7 @@
   "issue": 34,
   "issue_url": "https://github.com/nasa/prog_server/issues/34",
   "base": "5810353bc1dcb6144aea7531653170701995dd3c",
-  "sha": "19fb461c948db4373dd829b5ab68c07439d2aad0",
+  "sha": "40d5491866b4ef9db6d921c4fc792cb839da52ee",
   "branch": "fix/loading-update-response-20260926",
   "paths": [
     "src/prog_client/session.py",
